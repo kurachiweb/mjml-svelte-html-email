@@ -1,2 +1,44 @@
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://svelte.dev/docs/kit">svelte.dev/docs/kit</a> to read the documentation</p>
+<script lang="ts">
+	let isSubmitting = $state(false);
+	function onSubmit() {
+		isSubmitting = true;
+	}
+</script>
+
+<svelte:head>
+	<title>Send an email example using Svelte</title>
+</svelte:head>
+
+<form method="POST" action="/" class="mx-auto max-w-xl p-4 py-8 sm:px-8" onsubmit={onSubmit}>
+	<h1 class="mb-1 text-2xl font-semibold">Send an HTML email using Svelte</h1>
+	<p class="mb-8">
+		by <a href="https://github.com/kurachiweb" target="_blank" class="text-blue-700 underline"
+			>KurachiWeb</a
+		>
+	</p>
+	<label class="mb-8 block">
+		<p class="mb-2">Email address</p>
+		<input
+			type="email"
+			name="email"
+			required
+			maxlength="254"
+			class="w-full border border-stone-500 p-2"
+			placeholder="your@email.example"
+		/>
+	</label>
+	<label class="mb-8 block">
+		<p class="mb-2">Body</p>
+		<textarea
+			name="body"
+			required
+			class="h-80 w-full border border-stone-500 p-2"
+			placeholder="Input email body"
+		></textarea>
+	</label>
+	<button
+		disabled={isSubmitting}
+		class="bg-stone-200 px-4 py-3 text-lg disabled:cursor-not-allowed [&:not(:disabled)]:hover:bg-red-200"
+		>Send email</button
+	>
+</form>
