@@ -17,7 +17,7 @@
 		>
 	</p>
 	<label class="mb-8 block">
-		<p class="mb-2">Email address</p>
+		<p class="mb-2">Your email address</p>
 		<input
 			type="email"
 			name="email"
@@ -32,13 +32,24 @@
 		<textarea
 			name="body"
 			required
-			class="h-80 w-full border border-stone-500 p-2"
+			class="h-48 w-full border border-stone-500 p-2"
 			placeholder="Input email body"
+			defaultValue="Sign up is almost complete."
 		></textarea>
+	</label>
+	<label class="mb-8 block">
+		<p class="mb-2">Action-link label</p>
+		<input
+			name="action"
+			required
+			maxlength="32"
+			class="w-full border border-stone-500 p-2"
+			defaultValue="Sign up"
+		/>
 	</label>
 	<button
 		disabled={isSubmitting}
-		class="bg-stone-200 px-4 py-3 text-lg disabled:cursor-not-allowed [&:not(:disabled)]:hover:bg-red-200"
+		class="bg-orange-200 px-4 py-3 text-lg disabled:cursor-not-allowed [&:not(:disabled)]:hover:bg-orange-300"
 		>Send email</button
 	>
 </form>
