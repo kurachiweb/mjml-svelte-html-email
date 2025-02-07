@@ -49,7 +49,7 @@
 	</label>
 	<button
 		disabled={isSubmitting}
-		class="bg-orange-200 px-4 py-3 text-lg disabled:cursor-not-allowed [&:not(:disabled)]:hover:bg-orange-300"
+		class="bg-orange-200 px-4 py-3 text-lg disabled:cursor-not-allowed not-disabled:hover:bg-orange-300"
 		>Send email</button
 	>
 </form>
