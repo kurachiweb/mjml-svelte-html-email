@@ -5,8 +5,8 @@ services:
       dockerfile: ./Dockerfile
     tty: true
     ports:
-      - 55031:3000 # for build
-      - 55032:5173 # for dev
+      - ${PORT_SERVICE_FRONTEND_BUILD}:3000 # for build
+      - ${PORT_SERVICE_FRONTEND_DEV}:5173 # for dev
     networks:
       - external
       - internal

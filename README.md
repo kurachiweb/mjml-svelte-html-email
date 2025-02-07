@@ -3,7 +3,6 @@
 Create 
 
 ```bash
-cd mjml-svelte-html-email
 docker compose up -d --build
 ```
 
@@ -18,8 +17,6 @@ On container:
 ```bash
 npm run dev
 ```
-
-http://localhost:55011
 
 ## Building
 
